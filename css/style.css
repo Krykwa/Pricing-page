@@ -32,11 +32,38 @@ body {
 	font-family: 'Open Sans';
 }
 
+.button {
+    background-color: #367cfa;
+    border-radius: 5px;
+    color: #fff;
+    padding: 15px 16px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+}
+
+.button.outline {
+    background-color: transparent;
+    border: 1px solid #367cfa;
+    color: #367cfa;
+}
+
+.button.orange {
+    background: orange;
+}
+
+.button.outline.orange {
+    background: transparent;
+    border-color: orange;
+    color: orange;
+}
+
 .side-header {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
 	box-shadow: 2px 0px 7px #b8b8b8;
 }
 
@@ -61,7 +88,7 @@ body {
     align-items: center;
 }
 
-li {	
+li {
     list-style-type: none;
 }
 
@@ -118,14 +145,17 @@ a {
     flex-flow: row;
 }
 
-.free, .pro, .enterprise {
+.card {
     border: 3px solid #80808061;
     border-radius: 5px;
-	margin: 5px 16px;
+    margin: 5px 16px;
     width: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.free h2, .pro h2, .enterprise h2 {
+.card h2 {
     border-bottom: 2px solid #80808061;
     margin: 0;
     padding: 18px;
@@ -133,44 +163,33 @@ a {
     background-color: #fafafa;
 }
 
-p.cheap-price {
-    padding: 15px;
-}
-
-.free p, .pro p, .enterprise p {
+.card p {
     margin: 8px;
     line-height: 1.4em;
 }
 
-.sing-up-for-free > .button {
-    background-color: transparent;
-    border: 1px solid #367cfa;
-    border-radius: 5px;
-    color: #367cfa;
-    padding: 15px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+.card p.price {
+    padding: 15px;
+    font-size: 30px;
+}
+
+.card p.price.highlighted {
+    font-size: 50px;
+}
+
+.card p.price span {
+    color: #575757;
+    letter-spacing: -0.04em;
     font-size: 20px;
-    font-weight: 600;
-    cursor: pointer;
-    margin: 20px;
-    width: calc(100% - 40px);
+    margin-left: 10px;
+}
+
+.card .cta {
+    padding: 20px;
 }
 
 .get-started > .button, .contact-us > .button {
-    background-color: #367cfa;
-    border-radius: 5px;
-    color: white;
-    padding: 15px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    font-weight: 600;
-    cursor: pointer;
-    margin: 20px;
-    width: calc(100% - 40px);
+
 }
 
 .footer-menu-container {
